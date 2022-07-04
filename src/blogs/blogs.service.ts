@@ -31,7 +31,7 @@ export class BlogsService {
     this.blogs = this.blogs.filter((blog) => blog.id !== id);
   }
 
-  @Cron('10 * * * * *')
+  @Cron('*/10 * * * * *')
   handleCron() {
     this.logger.debug('Called when the current second is 10');
   }
